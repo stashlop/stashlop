@@ -2,16 +2,16 @@ name: Generate snake animation
 
 on:
   schedule: 
-    - cron: "* */12 * * *"
-  workflow_dispatch:
+    - cron: "* */12 * * *" # Runs every 12 hours
+  workflow_dispatch: # Allows manual triggering
   push:
     branches:
-    - master
+      - master # Triggers on push to master
 
 jobs:
   generate:
     permissions:
-      contents: write
+      contents: write # Allow writing to the repo
     runs-on: ubuntu-latest
     timeout-minutes: 5
 
@@ -22,7 +22,7 @@ jobs:
       - name: Generate snake.svg
         uses: Platane/snk/svg-only@v3
         with:
-          github_user_name: ${{stashlop}}
+          github_user_name: stashlop 
           outputs: dist/snake.svg?palette=github-dark
 
       - name: Push snake.svg to the output branch
@@ -31,4 +31,5 @@ jobs:
           target_branch: output
           build_dir: dist
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Ensure this token has permissions
+
