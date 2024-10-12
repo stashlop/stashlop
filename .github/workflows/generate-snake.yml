@@ -1,21 +1,27 @@
 name: Generate snake animation
 
-on:
-  schedule: 
-    - cron: "* */12 * * *" # Runs every 12 hours
-  workflow_dispatch: # Allows manual triggering
+on: [push, pull_request]
+ 
   push:
     branches:
       - master # Triggers on push to master
 
-jobs:
-  generate:
-    permissions:
       contents: write # Allow writing to the repo
     runs-on: ubuntu-latest
     timeout-minutes: 5
+jobs:
+  build:
+    runs-on: ubuntu-latest
 
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v4.0.4
+        with:
+          node-version: '14'
+          
       - name: Checkout repository
         uses: actions/checkout@v2
 
