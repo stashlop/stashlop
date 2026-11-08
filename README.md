@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="koi/koi.gif" width="256" alt="my git koi" />
+</p>
+
 <table>
 <tr>
 <td width="62%" valign="middle">
@@ -80,10 +84,6 @@
     <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/stashlop/stashlop/output/pacman-contribution-graph.svg">
     <img alt="pacman contribution graph" src="https://raw.githubusercontent.com/stashlop/stashlop/output/pacman-contribution-graph.svg">
   </picture>
-</p>
-
-<p align="center">
-  <img src="koi/koi.gif" width="256" alt="my git koi" />
 </p>
 
 <p align="center">
