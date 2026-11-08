@@ -83,6 +83,10 @@
 </p>
 
 <p align="center">
+  <img src="koi/koi.gif" width="256" alt="my git koi" />
+</p>
+
+<p align="center">
   <img src="https://visitor-badge.laobi.icu/badge?page_id=stashlop.stashlop&" alt="visitors" />
 </p>
 
